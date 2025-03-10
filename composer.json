@@ -1,0 +1,20 @@
+{
+  "name": "ody/task",
+  "description": "Manage Swoole tasks in ODY framework",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "ilyas",
+      "email": "ilyas@ody.dev"
+    }
+  ],
+  "require": {
+    "ody/helpers": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ody\\Task\\": "src/"
+    }
+  }
+}
