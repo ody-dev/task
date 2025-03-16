@@ -5,13 +5,11 @@
   "license": "proprietary",
   "authors": [
     {
-      "name": "ilyas",
+      "name": "Ilyas Deckers",
       "email": "ilyas@ody.dev"
     }
   ],
-  "require": {
-    "ody/helpers": "dev-master"
-  },
+  "require": {},
   "autoload": {
     "psr-4": {
       "Ody\\Task\\": "src/"
