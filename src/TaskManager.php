@@ -126,7 +126,7 @@ class TaskManager
         // Apply global middleware
         $processedParams = $this->applyMiddleware($params);
 
-        $taskId = parent::enqueue($taskClass, $processedParams, $priority);
+        $taskId = $this->enqueue($taskClass, $processedParams, $priority);
 
         // Initialize task status
         $this->taskStatuses[$taskId] = [
@@ -163,7 +163,7 @@ class TaskManager
         array $retryOptions = ['attempts' => 3, 'delay' => 1000, 'multiplier' => 2],
         int $priority = Task::PRIORITY_NORMAL
     ): int {
-        $taskId = parent::enqueue($taskClass, $params, $priority);
+        $taskId = $this->enqueue($taskClass, $params, $priority);
 
         // Store retry configuration
         $this->retryConfigs[$taskId] = $retryOptions;
